@@ -1,0 +1,29 @@
+<style>
+  #b1 {
+    background-color: red;
+    color: white;
+    border: none;
+  }
+  #b2 {
+    background-color: black;
+    color: white;
+    border: none;
+  }
+  input {
+    border: 3px solid green;
+  }
+</style>
+
+<button onclick="f1()" id="b1">Log In</button><br /><br />
+<button id="b2">Logout</button><br /><br />
+<input type="text" placeholder="email id" /><br /><br />
+<input type="password" placeholder="password" /><br /><br />
+
+<script>
+  function f1() {
+    document.querySelector("input").style.border = "3px solid red";
+    var btn = document.createElement("button");
+    btn.innerText = "Like button";
+    document.querySelector("body").appendChild(btn);
+  }
+</script>

@@ -1,0 +1,87 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-1">
+      <input
+        (change)="changeStyle('black', 'white', 'p1')"
+        checked
+        type="radio"
+        name="color"
+      />Black
+    </div>
+    <div class="col-1">
+      <input
+        (change)="changeStyle('red', 'white', 'p2')"
+        type="radio"
+        name="color"
+      />Red
+    </div>
+  </div>
+</div>
+
+<p [ngClass]="paraStyles">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt at enim a,
+  consectetur error est, aperiam nulla fugit earum corporis voluptas sequi
+  incidunt obcaecati odio temporibus labore veniam ea minus architecto dolorum
+  deserunt unde hic iusto! Quasi eum quam saepe doloribus animi esse eius
+  eligendi totam id dicta dolor cumque perferendis atque repudiandae, nobis
+  possimus nostrum libero eaque sapiente quaerat voluptas? Pariatur nulla fugit
+  dolorem asperiores ullam omnis accusamus dicta quas porro eos! Esse
+  perspiciatis unde modi dolorum distinctio odio veniam nulla repellat
+  voluptatibus nisi fuga natus libero dolor reiciendis culpa, voluptas inventore
+  ex voluptates quis porro temporibus ad ratione!
+</p>
+
+<p [ngClass]="paraStyles">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt at enim a,
+  consectetur error est, aperiam nulla fugit earum corporis voluptas sequi
+  incidunt obcaecati odio temporibus labore veniam ea minus architecto dolorum
+  deserunt unde hic iusto! Quasi eum quam saepe doloribus animi esse eius
+  eligendi totam id dicta dolor cumque perferendis atque repudiandae, nobis
+  possimus nostrum libero eaque sapiente quaerat voluptas? Pariatur nulla fugit
+  dolorem asperiores ullam omnis accusamus dicta quas porro eos! Esse
+  perspiciatis unde modi dolorum distinctio odio veniam nulla repellat
+  voluptatibus nisi fuga natus libero dolor reiciendis culpa, voluptas inventore
+  ex voluptates quis porro temporibus ad ratione!
+</p>
+
+<div
+  [ngStyle]="{
+    color: textColor,
+    'background-color': bgColor,
+    margin: '20px',
+    padding: '30px'
+  }"
+>
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod debitis fuga
+  explicabo corporis doloremque, consequuntur sit laborum fugit optio, sint
+  vero! Quaerat, perspiciatis et architecto vero quas beatae, possimus vel
+  distinctio voluptatum laboriosam ipsum optio ex, iusto doloremque
+  exercitationem. Sunt, doloribus tempore! Nemo aperiam minima facere obcaecati
+  ex molestias dicta sed doloribus, tempore natus consequuntur facilis deserunt
+  animi quibusdam maxime, ipsum totam corporis distinctio unde suscipit optio!
+  Maxime eius aut vel reprehenderit est exercitationem sint, vitae nihil,
+  praesentium magnam neque quidem unde adipisci accusantium hic autem illo ullam
+  nisi maiores doloremque? Assumenda ex et ratione magni voluptatem, aliquam
+  voluptas nesciunt.
+</div>
+
+<div
+  [ngStyle]="{
+    'background-color': bgColor,
+    color: textColor,
+    margin: '20px',
+    padding: '30px'
+  }"
+>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque atque,
+  deleniti deserunt amet eum, cumque quam consequatur iure aspernatur
+  praesentium magni culpa est perspiciatis quisquam maxime dolores qui tempore
+  beatae ad velit! Magnam commodi a at architecto accusamus vel nulla dicta
+  perferendis quis suscipit officiis eos minima fuga eius explicabo temporibus
+  ratione voluptatibus nemo nam consectetur iusto possimus earum, debitis esse.
+  Laborum consequatur possimus, eligendi quibusdam, laboriosam at, veritatis
+  perferendis numquam in temporibus sapiente quasi! Asperiores dolores, animi
+  natus consequuntur aliquid porro, ipsam neque, ipsum delectus ullam
+  perspiciatis facere. Harum, excepturi distinctio. Repellendus placeat
+  laboriosam beatae accusantium vel distinctio illum.
+</div>

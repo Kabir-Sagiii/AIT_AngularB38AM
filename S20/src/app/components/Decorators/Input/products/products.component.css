@@ -1,0 +1,18 @@
+.bg-image {
+  background-image: url("https://thumbs.dreamstime.com/z/responsive-design-mockup-different-office-items-table-top-55718165.jpg?w=360");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.bg-shadow {
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: cursive;
+}
+.bg-shadow h3 {
+  font-size: 37px;
+}

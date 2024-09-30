@@ -1,0 +1,27 @@
+<div class="container p-5">
+  <h2 class="text-primary my-2">String Interpolation</h2>
+  <div>
+    <h3>User Name :{{ username }}</h3>
+  </div>
+  <div class="container mt-5">
+    <dl>
+      <dt>Product Name</dt>
+      <dd>{{ productData.pname }}</dd>
+      <dt>Price</dt>
+      <dd>{{ productData.price }}</dd>
+      <dt>Description</dt>
+      <dd>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab iste,
+        asperiores atque omnis saepe quis illo. Veniam inventore, id est
+        incidunt quod nesciunt asperiores libero dolor et suscipit! Quisquam
+        perferendis iusto repudiandae, blanditiis commodi corrupti quod quos
+        repellendus voluptatem illum dolor expedita labore id sed distinctio est
+        qui fugiat ratione?
+      </dd>
+    </dl>
+
+    <button class="btn btn-warning" (click)="changePrice()">
+      Change Price
+    </button>
+  </div>
+</div>

@@ -1,0 +1,137 @@
+<!-- <div class="container my-3">
+  <div class="row">
+    <div class="col-2 form-check">
+      <input
+        (change)="fnshowBlackDiv(true)"
+        type="radio"
+        checked
+        name="div"
+        class="form-check-input"
+      />Black Div
+    </div>
+    <div class="col-1 form-check">
+      <input
+        (change)="fnshowBlackDiv(false)"
+        type="radio"
+        name="div"
+        class="form-check-input"
+      />Red Div
+    </div>
+  </div>
+</div>
+
+@if(showBlackDiv){
+
+<div class="container p-5 bg-dark text-white my-3">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam magnam,
+  voluptas, animi incidunt ratione minus magni id sit quos necessitatibus
+  placeat maiores illum eveniet optio, nam autem! Similique sunt quidem porro
+  repudiandae nesciunt soluta et maxime, aliquid numquam consequatur debitis est
+  harum. Enim, pariatur temporibus vitae consectetur laudantium quaerat rerum
+  magni saepe aperiam, vero, architecto nobis? Itaque maiores impedit
+  consequatur, molestias, debitis, architecto saepe sint dolores ipsam ipsum
+  deleniti fugit dolore asperiores. Eaque voluptas iusto maxime ad sapiente
+  possimus consequatur sit quae debitis optio ex veritatis hic rerum, non omnis
+  unde, vel expedita amet velit alias, provident placeat pariatur nulla.
+</div>
+}@else if(true){
+<div class="container bg-warning p-5 my-3">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam placeat
+  officiis assumenda quas possimus et fugiat obcaecati repellendus sapiente.
+  Iure reiciendis necessitatibus debitis nisi numquam ratione veniam ad sit
+  perspiciatis ex delectus, perferendis, nihil ipsa sapiente non ipsum, quos
+  quia laborum eveniet sint ullam recusandae possimus magni quisquam. Ipsum,
+  assumenda et dolor modi, optio unde quam corporis, ipsam maxime obcaecati
+  error eveniet aspernatur! Necessitatibus veniam itaque possimus laboriosam
+  minus sunt debitis molestias. Numquam maxime ad saepe blanditiis. Iste
+  molestiae explicabo esse sapiente beatae? Voluptatibus labore libero atque
+  corporis quibusdam minus id accusamus ipsa! Magnam, expedita error cum a
+  fugiat dicta.
+</div>
+} @else {
+<div class="container bg-danger text-white my-3 p-5">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id officiis
+  molestiae quibusdam repellendus vitae porro! Illum dolorem doloribus optio
+  atque ipsum fugiat, quae aliquid similique molestiae nam facere dignissimos,
+  excepturi quas cum reprehenderit incidunt qui iusto iure quasi. Quia quidem
+  expedita nobis tempore suscipit? Sunt assumenda consequatur omnis itaque
+  fugit? Doloremque corporis explicabo, nam porro numquam nemo laborum ad
+  ducimus incidunt dolorem exercitationem minus culpa rem vitae eaque
+  aspernatur, aliquid sit fugiat. Consequatur libero et quos quidem optio,
+  eveniet ab ipsa cumque rerum alias qui corporis minus non saepe aut nam
+  tempora! Laborum dolorem sunt commodi, dolores nisi nesciunt voluptatibus.
+</div>
+} -->
+
+<!-- } @if(!showBlackDiv){
+<div class="container bg-danger text-white my-3 p-5">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id officiis
+  molestiae quibusdam repellendus vitae porro! Illum dolorem doloribus optio
+  atque ipsum fugiat, quae aliquid similique molestiae nam facere dignissimos,
+  excepturi quas cum reprehenderit incidunt qui iusto iure quasi. Quia quidem
+  expedita nobis tempore suscipit? Sunt assumenda consequatur omnis itaque
+  fugit? Doloremque corporis explicabo, nam porro numquam nemo laborum ad
+  ducimus incidunt dolorem exercitationem minus culpa rem vitae eaque
+  aspernatur, aliquid sit fugiat. Consequatur libero et quos quidem optio,
+  eveniet ab ipsa cumque rerum alias qui corporis minus non saepe aut nam
+  tempora! Laborum dolorem sunt commodi, dolores nisi nesciunt voluptatibus.
+</div>
+} -->
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a
+            class="nav-link btn btn-primary active"
+            aria-current="page"
+            href="#"
+            (click)="changeTech('angular')"
+            >Angular</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn btn-primary"
+            href="#"
+            (click)="changeTech('react')"
+            >React</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn btn-primary"
+            href="#"
+            (click)="changeTech('js')"
+            >Javascript</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn btn-primary"
+            href="#"
+            (click)="changeTech('node')"
+            >Node JS</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container p-3 my-3">
+  <div class="row">
+    @switch(techName) { @case ('angular') {
+    <h2>Angular</h2>
+    } @case ('react') {
+    <h2>React JS</h2>
+    } @case ('js') {
+    <h2>Javascript</h2>
+    } @case ('node') {
+    <h2>NodeJS</h2>
+    } @default {
+    <h2>Nothing is matching</h2>
+    } }
+  </div>
+</div>

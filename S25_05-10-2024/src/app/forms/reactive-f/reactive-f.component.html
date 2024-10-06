@@ -1,0 +1,128 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <h3 class="text-success">Reactive Forms</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 shadow p-5">
+      <form (ngSubmit)="getUserInfo()" [formGroup]="myform">
+        <div class="my-2">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="username"
+            formControlName="username"
+          />
+          @if(isSubmitted&&myform.get("username").invalid){
+          <span class="text-danger">*username is required</span>
+          }
+        </div>
+        <div class="my-2">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="password"
+            formControlName="password"
+          />
+          @if(isSubmitted&&myform.get('password').getError('required')){
+          <span class="text-danger">*password is required</span>
+          } @if(isSubmitted&&myform.get('password').getError('maxlength')){
+          <span class="text-danger">*Enter maximum 5 char</span>
+          }
+        </div>
+        <div class="my-2">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="email"
+            formControlName="email"
+          />
+        </div>
+
+        <div class="my-2" formArrayName="experience">
+          @for(exp of myform.get('experience')['controls'];let i = $index;track
+          i){
+          <div class="my-2" [formGroupName]="i">
+            <input
+              class="form-control my-1"
+              type="text"
+              formControlName="companyName"
+              placeholder="Add companyName"
+            />
+            <select class="form-select" formControlName="expYear">
+              <option>Select Year</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>5</option>
+            </select>
+            <button class="btn btn-sm my-2 btn-danger">delete</button>
+          </div>
+          }
+        </div>
+
+        <!-- <div class="my-2" formArrayName="skills">
+          @for(skill of myform.get("skills")['controls']; let i =$index ;track
+          i){
+          <div class="my-2 container">
+            <div class="row">
+              <div class="col-10">
+                <input
+                  type="text"
+                  [formControlName]="i"
+                  class="form-control"
+                  placeholder="add skills"
+                />
+              </div>
+              <div class="col-1">
+                <button
+                  (click)="removeSkill(i)"
+                  type="button"
+                  class="btn btn-danger btn-sm"
+                >
+                  delete
+                </button>
+              </div>
+            </div>
+          </div>
+          }
+        </div> -->
+
+        <div class="my-2">
+          <button class="btn btn-success" type="button" (click)="addExp()">
+            Add Experience
+          </button>
+          <!-- <button (click)="addSkills()" class="btn btn-success" type="button">
+            Add Skills
+          </button> -->
+        </div>
+        <!-- <div class="my-2" formArrayName="address">
+          <div class="my-2">
+            <select class="form-select" formControlName="0">
+              <option>Select the City</option>
+              <option>Pune</option>
+              <option>Hyderabad</option>
+              <option>Chennai</option>
+              <option>Banglore</option>
+            </select>
+          </div>
+          <div class="my-2">
+            <select class="form-select" formControlName="1">
+              <option>Select the State</option>
+              <option>MH</option>
+              <option>TS</option>
+              <option>TN</option>
+              <option>KA</option>
+            </select>
+          </div>
+        </div> -->
+        <div class="my-5 text-center">
+          <button class="btn btn-success px-5">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

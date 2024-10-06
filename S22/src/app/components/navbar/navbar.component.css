@@ -1,0 +1,30 @@
+.navbar {
+  background-color: black;
+  height: 80px;
+  display: grid;
+  grid-template-columns: 30% 40% 25%;
+}
+.logo h2 {
+  font-family: cursive;
+}
+.links a,
+.logo,
+.icons a {
+  text-align: center;
+  color: white;
+  font-family: cursive;
+}
+.links a {
+  text-decoration: none;
+  margin-right: 50px;
+}
+.icons {
+  text-align: right;
+}
+.icons a {
+  margin-right: 15px;
+  font-size: 19px;
+}
+.icons button {
+  margin-right: 50px;
+}

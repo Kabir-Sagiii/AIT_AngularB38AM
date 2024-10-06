@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row text-center mt-3">
+    <h4 class="text-success">Cart Information</h4>
+  </div>
+  @for(cart of cartData;track cart.id){
+  <div class="row my-3">
+    <div class="col-3">
+      <img [src]="cart.image" width="70" height="70" />
+    </div>
+    <div class="col-3">{{ cart.title }}</div>
+    <div class="col-3">${{ cart.price }}</div>
+    <div class="col-3">
+      <button class="btn btn-danger" (click)="removeProduct(cart.id)">
+        Remove
+      </button>
+    </div>
+  </div>
+  }
+</div>

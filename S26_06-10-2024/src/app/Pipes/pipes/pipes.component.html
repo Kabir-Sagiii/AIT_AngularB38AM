@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row my-2">
+    <div class="col-12">
+      <h4>Date :{{ todaysData | date : "MMMM dd,yyyy" }}</h4>
+      <h4>{{ user | json }}</h4>
+      <h5>
+        {{ promiseObject | async | json | mycustompipe : "gender" : "city" }}
+      </h5>
+      <h5>{{ promiseObject | async | json | mycustompipe : "city" }}</h5>
+      <!-- <h2>{{promiseObject | custom :'city'}}</h2> -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <button class="btn btn-primary" (click)="updateDate()">
+        Update Date
+      </button>
+
+      <button class="btn mx-2 btn-primary" (click)="updatePromise()">
+        Update Promise
+      </button>
+    </div>
+  </div>
+</div>

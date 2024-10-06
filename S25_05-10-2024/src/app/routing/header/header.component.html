@@ -1,0 +1,31 @@
+<div>
+  <a
+    routerLink="/"
+    [routerLinkActive]="'active'"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Home</a
+  >
+  <a
+    routerLink="/material"
+    [routerLinkActive]="'active'"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Material</a
+  >
+  <a
+    routerLink="/products"
+    [queryParams]="{ limit: 20, sort: 'asc' }"
+    [routerLinkActive]="'active'"
+    >Products</a
+  >
+  <a routerLink="/tdf" [routerLinkActive]="'active'">TDF</a>
+  <a routerLink="/reactiveform" [routerLinkActive]="'active'">ReactiveForm</a>
+  <!-- <a routerLink="/pipe" [routerLinkActive]="'active'">Pipe</a> -->
+  <a routerLink="/profile" [routerLinkActive]="'active'">Profile</a>
+  <a routerLink="/contact" [routerLinkActive]="'active'">ContactUs</a>
+
+  @if(auth.isLoggedIn){
+  <button class="btn btn-outline-danger" (click)="logoutUser()">Logout</button>
+  }@else {
+  <a routerLink="/login" [routerLinkActive]="'active'">Login</a>
+  }
+</div>

@@ -1,0 +1,55 @@
+<div class="p-5">
+  <h2>Products Component</h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis accusantium
+    delectus nisi, ducimus totam modi eaque fugit, sit fugiat quo excepturi
+    voluptatem consequuntur incidunt ad unde, ut eveniet animi commodi
+    blanditiis a. Voluptas mollitia deleniti perferendis soluta fugit
+    voluptatibus, accusamus dolorem? Id, magni, consequatur ducimus repudiandae
+    laboriosam voluptate tempora distinctio, similique perspiciatis pariatur
+    placeat amet aspernatur? Magnam accusamus reprehenderit, ut placeat a quam
+    accusantium aliquam laudantium quo ipsa error nulla expedita. Quisquam nihil
+    sit doloremque nulla nisi dolores tenetur sunt? At facere cumque, hic
+    dolorem veniam modi quidem unde quos! Officia animi laborum qui
+    reprehenderit debitis. Quos dignissimos fugiat exercitationem.
+  </p>
+  <div class="d-flex my-3 gap-3">
+    <select
+      class="form-select form-select-md w-25"
+      (change)="getLimitedProducts($event)"
+    >
+      <option>Select Number of Products</option>
+      <option>5</option>
+      <option>10</option>
+      <option>15</option>
+    </select>
+
+    <select
+      class="form-select form-select-md w-25"
+      (change)="getSortedProducts($event)"
+    >
+      <option>asc</option>
+      <option>desc</option>
+    </select>
+  </div>
+
+  @if(productsData.length > 0){
+  <div class="d-flex flex-wrap justify-content-evenly">
+    @for( product of productsData;track product){
+    <div class="card w-25 mt-5 mx-3">
+      <div class="card-header">
+        <img [src]="product.image" width="250" height="200" />
+      </div>
+      <div class="card-body">
+        <h4 class="h6">{{ product.title | titlecase }}</h4>
+        <p>{{ product.price | currency : "INR" }}</p>
+        <a [routerLink]="'/productdetails/' + product.id"
+          ><button class="btn btn-outline-success">Product Details</button></a
+        >
+      </div>
+    </div>
+
+    }
+  </div>
+  }
+</div>

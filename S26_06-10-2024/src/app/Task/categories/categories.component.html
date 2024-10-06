@@ -1,0 +1,33 @@
+<div class="container w-50">
+  <div class="row">
+    <div class="col-3">
+      <input
+        type="radio"
+        name="category"
+        checked
+        (change)="selectCategory('all')"
+      />
+      <label>All</label>
+    </div>
+    <div class="col-3">
+      <input
+        type="radio"
+        name="category"
+        (change)="selectCategory('electronic')"
+      />
+      <label>Electronics</label>
+    </div>
+    <div class="col-3">
+      <input
+        type="radio"
+        name="category"
+        (change)="selectCategory('jewelery')"
+      />
+      <label>Jewelery</label>
+    </div>
+    <div class="col-3">
+      <input type="radio" name="category" (change)="selectCategory('mens')" />
+      <label>Mens</label>
+    </div>
+  </div>
+</div>

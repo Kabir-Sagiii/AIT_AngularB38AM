@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <div class="row">
+    <h2>Get Products Data</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis laborum
+      quaerat sapiente odit asperiores eum sequi vitae consectetur inventore,
+      numquam repellat. Pariatur qui similique ipsa non hic nemo dolorem animi
+      deleniti eum ex autem nam consequuntur fuga ad cumque accusantium
+      voluptatem, a voluptas rem! Dolores delectus placeat inventore impedit
+      commodi eius laudantium odit cum ducimus sed dolor, asperiores voluptatem.
+      Enim rerum nisi laboriosam mollitia eligendi voluptate delectus beatae
+      sint. Vel reprehenderit explicabo earum, dolore ullam nostrum nemo numquam
+      modi vitae blanditiis autem fuga aliquam rerum expedita harum! Voluptatem
+      magni facilis iste harum numquam quo incidunt quod inventore beatae!
+      Voluptates, officiis!
+    </p>
+    <div class="col-3">
+      <button class="btn btn-primary px-5" (click)="getProducts()">
+        get Products
+      </button>
+
+      @for(product of productsData;track product.id){
+      <h6 class="h6">{{ product.id }} - {{ product.title }}</h6>
+      }
+    </div>
+  </div>
+</div>

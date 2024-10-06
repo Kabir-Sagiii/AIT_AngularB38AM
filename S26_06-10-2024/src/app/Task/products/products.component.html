@@ -1,0 +1,41 @@
+<div class="container mt-5">
+  <div class="row">
+    <h4 class="text-primary">Products Details</h4>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui veritatis
+      amet dolor optio itaque suscipit nesciunt ab ullam repudiandae quis
+      corporis est magnam impedit laudantium molestiae, cum pariatur. Facere
+      expedita illo nobis qui! Consequuntur soluta repudiandae incidunt
+      explicabo aliquam iusto adipisci, quis nihil voluptatum quasi. Autem
+      accusamus molestias cupiditate, minus nisi magnam quia odit quam inventore
+      facere quas obcaecati fugiat blanditiis veniam repellat sint est illo
+      ullam dolores! Provident vero blanditiis, veritatis, saepe id eum vel,
+      tempora soluta quam sit odio nesciunt totam inventore? Dolorem, molestiae
+      doloremque reprehenderit sapiente consequatur accusamus ea neque, eum
+      eligendi fugiat voluptas id dolorum? Quod ea accusantium laborum magni,
+      totam perspiciatis iste consequuntur dolore ipsa. Nobis nisi aut quia
+      placeat tenetur rem sit aspernatur commodi nemo adipisci voluptatem animi,
+      inventore ea itaque optio autem odit. Optio architecto illum eius impedit
+      aut perspiciatis dolorum deserunt corporis corrupti. Qui blanditiis totam
+      inventore accusantium placeat dolores ipsam iure.
+    </p>
+  </div>
+  <div class="row">
+    <app-categories (myEvent)="getCategory($event)"></app-categories>
+  </div>
+
+  <div class="row">
+    <h3 class="text-center text-success mt-5">
+      {{
+        allProducts
+          ? "All Categories"
+          : currentProducts[0].category + " Category"
+      }}
+    </h3>
+    @for(product of currentProducts; track product){
+    <div class="col-4">
+      <app-product [productData]="product"></app-product>
+    </div>
+    }
+  </div>
+</div>

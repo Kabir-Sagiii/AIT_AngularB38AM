@@ -1,0 +1,6 @@
+.ng-submitted input.ng-invalid {
+  border: 3px solid red;
+}
+.ng-submitted input.ng-valid {
+  border: 2px solid green;
+}

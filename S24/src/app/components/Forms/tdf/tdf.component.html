@@ -1,0 +1,96 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <h3 class="text-success">Template Driven Form</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 p-3 shadow">
+      <form (ngSubmit)="getFormsData(myform)" #myform="ngForm">
+        <div class="my-3">
+          <input
+            type="text"
+            [ngClass]="{
+              inputValid: myform.submitted && myform.controls['username'].valid,
+              inputInvalid:
+                myform.submitted && myform.controls['username'].invalid
+            }"
+            class="form-control"
+            placeholder="username"
+            name="username"
+            ngModel
+            required
+            minlength="5"
+            pattern=""
+          />
+          @if(myform.submitted &&
+          myform.controls['username'].getError('required')){
+          <span class="text-danger">*Username is required</span>
+          } @if(myform.submitted &&
+          myform.controls['username'].getError('minlength')){
+          <span class="text-danger">*Minimum Length Should be 5</span>
+          } @if(myform.submitted &&
+          myform.controls['username'].getError('pattern')){
+          <span class="text-danger">*error message</span>
+          }
+        </div>
+        <div class="my-3">
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            ngModel
+            placeholder="password"
+          />
+        </div>
+        <div class="my-3">
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            ngModel
+            placeholder="email"
+          />
+        </div>
+        <div class="my-4 text-center">
+          <button class="btn btn-success px-5 text-center">Submit</button>
+          <button
+            class="btn btn-danger mx-2"
+            type="button"
+            (click)="myform.reset()"
+          >
+            reset
+          </button>
+          <button
+            class="btn btn-warning mx-2 mt-2"
+            type="button"
+            (click)="
+              myform.setValue({
+                username: 'hello',
+                password: '----',
+                email: 'xyz@gmail.com'
+              })
+            "
+          >
+            set Default Value
+          </button>
+
+          <button
+            class="btn btn-info mt-2 mx-2"
+            type="button"
+            (click)="
+              myform.form.patchValue({
+                username: 'sagar',
+                email: 'sagar@gmail.com'
+              })
+            "
+          >
+            patch
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

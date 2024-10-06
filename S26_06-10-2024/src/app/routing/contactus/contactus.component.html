@@ -1,0 +1,38 @@
+<div class="container mt-2">
+  <div class="row bg-primary bgimage" style="height: 250px"></div>
+  <div class="row mt-2">
+    <div class="col-12">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui quos id,
+        veniam aut aliquam quia nemo quod sed necessitatibus est atque beatae!
+        Ipsum facilis, libero, aliquid rerum voluptatibus id doloribus
+        dignissimos velit sunt ducimus, similique nemo dolorem aliquam
+        cupiditate sed cum ullam fuga maiores debitis excepturi quis tenetur.
+        Asperiores laudantium eligendi molestiae non, impedit ad suscipit nobis.
+        Sunt tenetur harum fugit consequatur iure libero aliquid corporis. Velit
+        exercitationem, accusantium earum amet eaque vitae corrupti magnam, est
+        quaerat assumenda dicta? Vitae laboriosam accusantium aspernatur cum.
+        Sunt minima commodi rem. Dolores excepturi ad vero nobis odit eaque
+        vitae adipisci commodi quod nam.
+      </p>
+    </div>
+  </div>
+  @if(auth.isLoggedIn){
+  <div class="row mt-3">
+    <div class="col-2"></div>
+    <div class="col-6">
+      <input
+        [(ngModel)]="email"
+        class="form-control"
+        type="email"
+        placeholder="enter email"
+      />
+    </div>
+    <div class="col-3">
+      <button class="btn btn-primary px-5" (click)="submitEmail()">
+        Submit
+      </button>
+    </div>
+  </div>
+  }
+</div>

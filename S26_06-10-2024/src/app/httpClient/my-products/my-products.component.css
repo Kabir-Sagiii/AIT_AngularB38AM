@@ -1,0 +1,14 @@
+.card h6 {
+  font-size: 17px !important;
+  font-weight: bold;
+  font-family: cursive;
+}
+.card {
+  width: 250px;
+  box-shadow: 0 0 10px green;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: 20px 0px;
+}

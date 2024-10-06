@@ -1,0 +1,152 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <h3 class="text-success">Reactive Form</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 p-3 shadow">
+      <form [formGroup]="myForm" (ngSubmit)="getFormDetails()">
+        <div class="my-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="username"
+            name="username"
+            formControlName="username"
+          />
+          @if(myForm.get('username').touched &&
+          myForm.get("username").getError("required")){
+          <span class="text-danger">*Username is required</span>
+          }
+        </div>
+        <div class="my-3">
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="password"
+            formControlName="password"
+          />
+          @if(myForm.get('password').touched &&
+          myForm.get("password").getError("required")){
+          <span class="text-danger">*Password is required</span>
+          } @if(myForm.get('password').touched &&
+          myForm.get("password").getError("minlength")){
+          <span class="text-danger">*Add Minimum 5 character's</span>
+          }
+        </div>
+        <div class="my-3">
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="email"
+            formControlName="email"
+          />
+        </div>
+
+        <div class="my-3" formArrayName="experience">
+          @for(experience of myForm.get('experience')['controls'];let i=
+          $index;track experience){
+          <div class="my-2" [formGroupName]="i">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="company name"
+              formControlName="companyName"
+            />
+            <select class="form-select my-1" formControlName="expYr">
+              <option>Select Year</option>
+              <option>1</option>
+              <option>3</option>
+              <option>5</option>
+              <option>7</option>
+            </select>
+            <button
+              (click)="deleteControl(i)"
+              type="button"
+              class="btn-sm btn btn-danger"
+            >
+              delete
+            </button>
+          </div>
+          }
+        </div>
+
+        <div class="my-2">
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="addDynamicControl()"
+          >
+            Add Experience
+          </button>
+        </div>
+
+        <!-- <div class="my-2" formArrayName="skills">
+          @for(skill of myForm.get("skills")['controls'];track skill;let i =
+          $index){
+          <div class="my-2">
+            <input
+              [formControlName]="i"
+              type="text"
+              placeholder="add skills"
+              class="form-control"
+            />
+            <button
+              (click)="deleteControl(i)"
+              type="button"
+              class="btn btn-sm btn-danger my-1"
+            >
+              delete
+            </button>
+          </div>
+
+          }
+        </div> -->
+        <!-- <div class="my-1">
+          <button
+            type="button"
+            class="btn btn-warning"
+            (click)="addDynamicControl()"
+          >
+            Add Skills
+          </button>
+        </div> -->
+        <div class="my-4 text-center">
+          <button
+            class="btn btn-success px-5 text-center"
+            [disabled]="myForm.invalid"
+          >
+            Submit
+          </button>
+          <button
+            class="btn btn-danger mx-2"
+            type="button"
+            (click)="myForm.reset()"
+          >
+            reset
+          </button>
+          <button
+            class="btn btn-warning mx-2 mt-2"
+            type="button"
+            (click)="setAllValues()"
+          >
+            set Default Value
+          </button>
+
+          <button
+            class="btn btn-info mt-2 mx-2"
+            type="button"
+            (click)="myForm.patchValue({ username: 'Sneha' })"
+          >
+            patch
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <h3 class="text-success">Reactive Form</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 p-3 shadow">
+      <form [formGroup]="myForm" (ngSubmit)="getFormDetails()">
+        <div class="my-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="username"
+            name="username"
+            formControlName="username"
+          />
+        </div>
+        <div class="my-3">
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="password"
+            formControlName="password"
+          />
+        </div>
+        <div class="my-3">
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="email"
+            formControlName="email"
+          />
+        </div>
+        <div class="my-4 text-center">
+          <button class="btn btn-success px-5 text-center">Submit</button>
+          <button
+            class="btn btn-danger mx-2"
+            type="button"
+            (click)="myForm.reset()"
+          >
+            reset
+          </button>
+          <button
+            class="btn btn-warning mx-2 mt-2"
+            type="button"
+            (click)="setAllValues()"
+          >
+            set Default Value
+          </button>
+
+          <button
+            class="btn btn-info mt-2 mx-2"
+            type="button"
+            (click)="myForm.patchValue({ username: 'Sneha' })"
+          >
+            patch
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+div {
+  height: 70px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div a {
+  color: white;
+  text-decoration: none;
+  margin-right: 50px;
+}
+.active {
+  font-size: 17px;
+  color: blue !important;
+  font-weight: bold;
+}

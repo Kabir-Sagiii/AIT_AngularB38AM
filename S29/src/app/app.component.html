@@ -1,0 +1,119 @@
+<!-- <app-navbar> </app-navbar>
+<div class="container p-5">
+  <button mat-button>Login</button>
+  <button mat-raised-button>Logout</button>
+  <button mat-stroked-button>Like</button>
+  <button mat-flat-button>Share</button>
+  <button mat-fab>
+    <mat-icon>delete</mat-icon>
+  </button>
+</div>
+<div class="container w-25 mt-4">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title> Angular MAterial </mat-card-title>
+      <mat-card-subtitle>Card Module</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur id
+      qui tempora culpa temporibus odit at sunt cupiditate modi omnis, illo
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Cancel</button>
+      <button mat-flat-button>Proceed</button>
+    </mat-card-actions>
+  </mat-card>
+</div> -->
+
+<!-- <div class="container p-3">
+  <mat-form-field appearance="outline">
+    <mat-label>User Name</mat-label>
+    <input placeholder="enter text" type="text" matInput />
+  </mat-form-field>
+
+  <mat-radio-group>
+    <mat-radio-button>Male</mat-radio-button>
+    <mat-radio-button>Female</mat-radio-button> </mat-radio-group
+  ><br /><br /><br />
+
+  <button mat-flat-button [matMenuTriggerFor]="mymenu">Open Menu</button>
+  <mat-menu #mymenu="matMenu" xPosition="after">
+    <option mat-menu-item>1</option>
+    <option mat-menu-item [matMenuTriggerFor]="mysubmenu">2</option>
+    <option mat-menu-item>3</option>
+  </mat-menu>
+
+  <mat-menu #mysubmenu="matMenu" yPosition="below">
+    <option mat-menu-item>sub 1</option>
+    <option mat-menu-item>sub 2</option>
+    <option mat-menu-item>sub 3</option>
+  </mat-menu>
+</div> -->
+
+<mat-vertical-stepper>
+  <mat-step>
+    <ng-template matStepLabel>First</ng-template>
+    <mat-form-field appearance="outline">
+      <mat-label>User Name</mat-label>
+      <input type="text" matInput placeholder="enter text" />
+    </mat-form-field>
+    <button mat-button matStepperNext>Next</button>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel="">Second</ng-template>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input
+        type="password"
+        matInput
+        placeholder="enter text"
+      /> </mat-form-field
+    ><br />
+    <button mat-button matStepperPrevious>Previous</button>
+    <button mat-button matStepperNext>Next</button>
+  </mat-step>
+  <mat-step>
+    <mat-form-field appearance="outline">
+      <mat-label>User Name</mat-label>
+      <input type="text" matInput placeholder="enter text" />
+    </mat-form-field>
+
+    <button mat-stroked-button>Submit</button>
+    <br />
+    <button mat-button matStepperPrevious>Previous</button>
+  </mat-step>
+</mat-vertical-stepper>
+
+<mat-horizontal-stepper>
+  <mat-step>
+    <ng-template matStepLabel>First</ng-template>
+    <mat-form-field appearance="outline">
+      <mat-label>User Name</mat-label>
+      <input type="text" matInput placeholder="enter text" />
+    </mat-form-field>
+    <button mat-button matStepperNext>Next</button>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel="">Second</ng-template>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input
+        type="password"
+        matInput
+        placeholder="enter text"
+      /> </mat-form-field
+    ><br />
+    <button mat-button matStepperPrevious>Previous</button>
+    <button mat-button matStepperNext>Next</button>
+  </mat-step>
+  <mat-step>
+    <mat-form-field appearance="outline">
+      <mat-label>User Name</mat-label>
+      <input type="text" matInput placeholder="enter text" />
+    </mat-form-field>
+
+    <button mat-stroked-button>Submit</button>
+    <br />
+    <button mat-button matStepperPrevious>Previous</button>
+  </mat-step>
+</mat-horizontal-stepper>

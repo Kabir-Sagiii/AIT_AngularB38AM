@@ -1,0 +1,35 @@
+.box1 {
+  background-image: url("https://wallpaperboat.com/wp-content/uploads/2020/11/10/60057/shopping-02.jpg");
+}
+.box2 {
+  background-image: url("https://th.bing.com/th/id/OIP.4n1c9e2qjMrynEdlsSWuTQHaEo?rs=1&pid=ImgDetMain");
+}
+.box3 {
+  background-image: url("https://wallpapercave.com/wp/wp1877610.jpg");
+}
+.box {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.bgShadow {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.bgShadow h1 {
+  color: white;
+  font-size: 57px;
+}
+.bgShadow p {
+  color: white;
+  font-size: 19px;
+}
+.bgShadow h3 {
+  font-size: 32px;
+}

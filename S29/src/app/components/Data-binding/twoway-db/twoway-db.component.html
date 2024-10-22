@@ -1,0 +1,25 @@
+<div class="container mt-5 p-3">
+  <div class="row">
+    <div class="col-6">
+      <h2>Two Way Data Binding</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <!-- <input type="text"
+             class="form-control"
+        [value]="inputData" 
+        (input)="getData($event)" 
+        /> -->
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="inputData" />
+    <div class="col-4">
+      <button (click)="printInputData()" class="btn btn-success">
+        Get Data
+      </button>
+      <button (click)="updateInputData()" class="btn btn-danger mx-2">
+        Update Data
+      </button>
+    </div>
+  </div>
+</div>

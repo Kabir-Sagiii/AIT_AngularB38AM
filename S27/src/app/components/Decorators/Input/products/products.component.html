@@ -1,0 +1,43 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-success">Products Details</h2>
+      <p class="lead">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim alias
+        veritatis voluptas dolor vero autem animi tempora molestias, tenetur
+        impedit praesentium iste excepturi pariatur, ipsum id expedita nihil
+        officiis ullam reprehenderit. Suscipit soluta expedita, voluptatem minus
+        est ullam dicta inventore voluptatum doloribus ex quaerat ratione,
+        porro, repellendus minima nobis ad?
+      </p>
+    </div>
+  </div>
+
+  <div class="row bg-image" style="height: 270px">
+    <div class="bg-shadow text-white h-100">
+      <h3>Electronic Products</h3>
+      <p class="lead">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati
+        tempore laudantium ut, voluptatum, beatae cupiditate quae voluptatem
+        architecto eius libero nihil sunt tenetur doloribus ratione sit alias,
+        eos expedita repellat?
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-14">
+    <app-categories
+      (myEvent)="filterDataBasedOnCategory($event)"
+    ></app-categories>
+  </div>
+</div>
+
+<div class="row">
+  @for(product of filteredData;track product.id){
+  <div class="col-4">
+    <app-product [parentData]="product"></app-product>
+  </div>
+  }
+</div>

@@ -1,0 +1,52 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-2 form-check">
+      <input
+        checked
+        type="radio"
+        name="category"
+        class="form-check-input"
+        value="all"
+        (change)="getCategoryInfo($event)"
+      />ALL
+    </div>
+    <div class="col-2 form-check">
+      <input
+        type="radio"
+        name="category"
+        class="form-check-input"
+        value="electronics"
+        (change)="getCategoryInfo($event)"
+      />Electronics
+    </div>
+    <div class="col-2 form-check">
+      <input
+        type="radio"
+        name="category"
+        class="form-check-input"
+        value="jewelery"
+        (change)="getCategoryInfo($event)"
+      />Jewelery
+    </div>
+    <div class="col-2 form-check">
+      <input
+        type="radio"
+        name="category"
+        class="form-check-input"
+        value="men's clothing"
+        (change)="getCategoryInfo($event)"
+      />MensClothing
+    </div>
+    <div class="col-2 form-check">
+      <input
+        type="radio"
+        name="category"
+        class="form-check-input"
+        value="women's clothing"
+        (change)="getCategoryInfo($event)"
+      />WomensClothing
+    </div>
+    <div class="col-1"></div>
+  </div>
+</div>

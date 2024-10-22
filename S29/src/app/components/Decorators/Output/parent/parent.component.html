@@ -1,0 +1,10 @@
+<div class="container mt-5">
+  <div class="row">
+    <h2 class="h4 text-success">Parent Component</h2>
+    <p class="lead">{{ childData }}</p>
+  </div>
+  <hr />
+  <div class="row">
+    <app-child (myCustomEvent)="getChildData($event)"></app-child>
+  </div>
+</div>
